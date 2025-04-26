@@ -1,0 +1,58 @@
+/* Real-Time Indicator */
+.last-updated {
+  font-size: 12px;
+  color: #a1a1aa;
+  margin-left: 10px;
+}
+
+/* Loading Animation */
+.loading-spinner {
+  border: 3px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  border-top: 3px solid #4f46e5;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Price Change Animation */
+@keyframes priceUpdate {
+  0% { background-color: rgba(16, 185, 129, 0.3); }
+  100% { background-color: transparent; }
+}
+
+tr.price-updated {
+  animation: priceUpdate 1s ease-out;
+}
+
+/* Chain Badges */
+.chain-badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.chain-badge.ethereum {
+  background-color: #627eea33;
+  color: #627eea;
+}
+
+.chain-badge.binance {
+  background-color: #f3ba2f33;
+  color: #f3ba2f;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .token-list table {
+    display: block;
+    overflow-x: auto;
+  }
+}
